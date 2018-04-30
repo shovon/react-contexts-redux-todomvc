@@ -1,0 +1,4 @@
+.todo-list li.editing label {
+  /* It turns out, this attribute is not set by the todomvc defaults. */
+  display: none;
+}
