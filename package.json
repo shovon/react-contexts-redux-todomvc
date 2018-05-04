@@ -4,10 +4,14 @@
   "private": true,
   "dependencies": {
     "@types/history": "^4.6.2",
+    "@types/random-js": "^1.0.30",
     "history": "^4.7.2",
+    "random-js": "^1.0.8",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts-ts": "2.15.1",
+    "redux": "^4.0.0",
+    "sets-utils": "https://github.com/shovon/sets-utils",
     "todomvc-app-css": "^2.1.1"
   },
   "scripts": {

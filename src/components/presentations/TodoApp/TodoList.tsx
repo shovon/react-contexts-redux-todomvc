@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Todo from './Todo';
-import RouterContext from '../../contexts/RouterContext';
-import TodoAppContext from '../../contexts/TodoAppContext';
+import RouterContext from '../../../contexts/RouterContext';
+import TodoAppContext from '../../../contexts/TodoAppContext';
 
 export default () => (
   <TodoAppContext.Consumer>

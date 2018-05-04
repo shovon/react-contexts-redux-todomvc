@@ -23,7 +23,7 @@ However, this yields potentially tightly coupled code. Change in the interface o
 
 And so, react redux was introduced to mitigate this.
 
-With React Redux, the "provider" component is what reacts to changes to the store, and it is also what passes state to child "Container" components. "Container" components are what gets the current state and event handlers from the store.
+With React Redux, the "provider" component is what responds to changes to the store, and it is also what passes state to child "Container" components. "Container" components are what gets the current state and event handlers from the store. There can exist multiple container components, all of which that don't require that a parent component pass state down to the children.
 
 ## How context differences from React Redux
 

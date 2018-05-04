@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component, DetailedHTMLProps, AnchorHTMLAttributes } from 'react';
-import RouterContext from '../contexts/RouterContext';
+import RouterContext from '../../contexts/RouterContext';
 
 type AnchorProps = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,

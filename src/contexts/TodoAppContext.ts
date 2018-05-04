@@ -1,14 +1,5 @@
 import { createContext } from 'react';
-
-export interface ITodoItem {
-  id: string
-  title: string
-  completed: boolean
-};
-
-export interface ITodoState {
-  todos: ITodoItem[]
-};
+import { ITodosState } from '../modules/todos';
 
 export interface ITodoActions {
   createTodo: (title: string) => void
@@ -21,7 +12,7 @@ export interface ITodoActions {
 
 export interface ITodoAppContextProps {
   actions: ITodoActions
-  state: ITodoState
+  state: ITodosState
 };
 
 const uninmplementedFunction = () => { throw new Error('Not implemented!'); };

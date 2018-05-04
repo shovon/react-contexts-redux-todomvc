@@ -1,6 +1,6 @@
 import * as React from 'react';
-import TodoAppContext from '../../contexts/TodoAppContext';
-import RouterContext from '../../contexts/RouterContext';
+import TodoAppContext from '../../../contexts/TodoAppContext';
+import RouterContext from '../../../contexts/RouterContext';
 import Link from '../Link'
 
 export default () => (
