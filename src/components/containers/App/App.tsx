@@ -54,10 +54,20 @@ export default class App extends Component<IAppProps, ITodosState> {
   }
 
   public componentDidMount() {
-    this.store = createStore(todosReducer, this.state);
+    // React redux dev tools.
+    const devToolKey = '__REDUX_DEVTOOLS_EXTENSION__';
+
+    this.store = process.env.NODE_ENV === 'development' ?
+      createStore(
+        todosReducer,
+        this.state,
+        window[devToolKey] &&
+        window[devToolKey]()
+       ) :
+       createStore(todosReducer, this.state);
+
     this.unsubscribe = this.store.subscribe(() => {
       localStorage.setItem(appStateKey, JSON.stringify(this.store.getState()));
-      console.log(this.store.getState());
       this.setState(this.store.getState());
     });
   }
