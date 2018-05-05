@@ -4,6 +4,7 @@ type ACTION_CREATE = 'todos/CREATE';
 type ACTION_DELETE_COMPLETED = 'todos/DELETE_COMPLETED';
 type ACTION_DELETE_TODO = 'todos/DELETE_TODO';
 type ACIION_EDIT_TODO = 'todos/EDIT_TODO';
+type ACTION_INITIALIZE = 'todos/INITIALIZE';
 type ACTION_TOGGLE_COMPLETE_ALL = 'todos/TOGGLE_COMPLETE_ALL';
 type ACTION_TOGGLE_TODO_COMPLETION = 'todos/TOGGLE_TODO_COMPLETION';
 
@@ -35,6 +36,7 @@ interface ITodosAction extends Action {
     ACTION_DELETE_COMPLETED |
     ACTION_DELETE_TODO |
     ACIION_EDIT_TODO |
+    ACTION_INITIALIZE |
     ACTION_TOGGLE_COMPLETE_ALL |
     ACTION_TOGGLE_TODO_COMPLETION
 
@@ -134,7 +136,8 @@ export default function reducer(
         )
       });
     }
-   }
+  }
+  return state;
 }
 
 export const create = (title: string): ICreateAction => ({

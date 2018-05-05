@@ -57,9 +57,9 @@ export default class App extends Component<IAppProps, ITodosState> {
     this.store = createStore(todosReducer, this.state);
     this.unsubscribe = this.store.subscribe(() => {
       localStorage.setItem(appStateKey, JSON.stringify(this.store.getState()));
+      console.log(this.store.getState());
       this.setState(this.store.getState());
     });
-    this.setState(this.store.getState());
   }
 
   public componentWillUnmount() {

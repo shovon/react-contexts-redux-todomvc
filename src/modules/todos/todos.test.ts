@@ -77,6 +77,10 @@ const createManyRandomTodos = (
     i => createRandomTodo(i, completionProbability)
   );
 
+it('should have initialized for non-existent state', () => {
+  assert(todosReducer(undefined, { type: 'todos/INITIALIZE' }));
+});
+
 it('should create new todos', () => {
   const titles = new Set(
     generateArray(randomInteger(5, 15), () => randomString(5, 15))
